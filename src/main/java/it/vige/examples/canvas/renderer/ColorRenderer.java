@@ -37,7 +37,7 @@ public class ColorRenderer implements PointRenderer {
 	 */
 	public void aroundRectangle(int x, int y) {
 		// Base cases
-		if (x < 0 || x > color.getCanvas().getWidth() - 1 || y < 0 || y > color.getCanvas().getHeight() - 1)
+		if (x < 0 || x >= color.getCanvas().getWidth() || y < 0 || y >= color.getCanvas().getHeight())
 			return;
 		char[][] matrix = color.getCanvas().getMatrix();
 		char characterInMatrix = matrix[x][y];
